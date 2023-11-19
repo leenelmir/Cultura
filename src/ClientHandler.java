@@ -1,4 +1,3 @@
-/*
 import java.io.*;
 import java.net.Socket;
 
@@ -12,19 +11,15 @@ public class ClientHandler implements Runnable {
     @Override
     public void run() {
         try {
-            boolean login = false;
-            if (login){
-
+            boolean signup = true;
+            // todo: add GUI function when pressing sign up or login
+            if (signup){
+                System.out.println("------------------ SIGNUP ------------------");
+                UserFunctions.signupUser();
             }
-            else {
+            System.out.println("------------------ LOGIN ------------------");
+            UserFunctions.loginUser();
 
-            }
-
-            // Handle client communication here
-            // You may want to create a separate class for handling client requests
-            // and pass the clientSocket to it.
-        } catch (IOException e) {
-            e.printStackTrace();
         } finally {
             try {
                 clientSocket.close();
@@ -33,5 +28,6 @@ public class ClientHandler implements Runnable {
             }
         }
     }
+
 }
-*/
+
